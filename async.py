@@ -2,18 +2,21 @@ import asyncio
 import time
 
 a = []
+x = len(a)
 
 async def task1():
     print('Task 1 started')
-    await asyncio.sleep(2)
-    print(a)
+    await asyncio.sleep(1)
+    while x < 1:
+        print(a)
+        time.sleep(1)
     print('Task 1 finished')
 
 async def task2():
     print('Task 2 started')
-    for i in ["abc","def"]:
+    for i in ["abc","def", "ghi", "jkl"]:
         a.append(i)
-
+        time.sleep(1)
     await asyncio.sleep(1)
     print('Task 2 finished')
 
