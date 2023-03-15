@@ -1,15 +1,19 @@
 import asyncio
-import time
+
 
 a = []
 
 c = ["abc","def", "ghi", "jkl"]
 
+
+def synchronous_function():
+    print(a)
+
 async def task1():
     print('Task 1 started')
     x = len(a)
     while x < 4:
-        print(a)
+        synchronous_function()
         x = len(a)
         await asyncio.sleep(1)
     print('Task 1 finished')
