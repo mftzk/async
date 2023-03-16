@@ -8,7 +8,7 @@ c = ["abc","def", "ghi", "jkl"]
 
 def synchronous_function():
     print(a)
-
+# function that run for see the dict
 async def task1():
     print('Task 1 started')
     x = len(a)
@@ -17,7 +17,7 @@ async def task1():
         x = len(a)
         await asyncio.sleep(1)
     print('Task 1 finished')
-
+# function for add value to dict
 async def task2():
     print('Task 2 started')
     for i in c:
